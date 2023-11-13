@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "zlm9Sa8bL9/HJXP1h+FGliyrPd+rp6uGOzuNft5s4EW5/3hMwsEWZ4Ap/FAO2s6KksKNW16mLhf8vNVNA3+olQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\andre\\Downloads\\assignment5\\SQL-Injection-Frontend.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\andre\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\andre\\.nuget\\packages\\npgsql\\7.0.6\\npgsql.7.0.6.nupkg.sha512"
+  ],
+  "logs": []
+}
