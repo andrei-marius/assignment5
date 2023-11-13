@@ -36,8 +36,8 @@ public class Hashing {
   // hashSHA256() - hashing of the password and the salt
 
   private string hashSHA256(string password, string saltstring) {
-    byte[] hashinput = Encoding.UTF8.GetBytes(saltstring + password); 
-    byte[] hashoutput = iteratedSha256(hashinput, 1);
+    byte[] hashinput = Encoding.UTF8.GetBytes(saltstring + password);
+    byte[] hashoutput = iteratedSha256(hashinput, 100000);
     return Convert.ToHexString(hashoutput);
   }
 

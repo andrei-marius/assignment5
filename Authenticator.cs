@@ -144,6 +144,7 @@ public class Authenticator {
             string s = e.ToString().Substring(1, 23); // printing only first part of exc message
             Console.WriteLine(s + " ....");
             Console.WriteLine();
+            Console.WriteLine(e.Message.ToString());
         }
     }
 

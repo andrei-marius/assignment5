@@ -35,9 +35,9 @@ do {
      case "sc":
        safeComposedQuery();
        break;
-     //case "c":
-     //  composedQuery();
-     //  break;
+     case "c":
+       composedQuery();
+       break;
      default:
        Console.WriteLine("you typed " + "'" + s + "'" + " -- use a suggested value");
        break;
@@ -80,14 +80,30 @@ void safeComposedQuery()
     // defining the query
     Console.Write("Please type id of a course: ");
     string? user_defined = Console.ReadLine();
-    string sql = $"select * from safe_course({user_defined})";
+    string sql = $"select * from safe_course('{user_defined}')";
 
     // printing query string to console
-    Console.Write("Query to be executed: " + sql);
-    Console.ForegroundColor = ConsoleColor.Red;
-    Console.Write(user_defined);
+    Console.Write("Query to be executed: " + sql + "\n");
+
+    // executing query
+    auth.query(sql);
+}
+
+void composedQuery()
+{
+    // defining the query
+    string staticSQLbefore = "select * from course where course_id = '";
+    Console.Write("Please type id of a course: ");
+    string? user_defined = Console.ReadLine();
+    string staticSQLafter = "' and dept_name != 'Biology'";
+    string sql = staticSQLbefore + user_defined + staticSQLafter;
+
+    // printing query string to console
+    Console.Write("Query to be executed: " + sql + "\n");
+    //Console.ForegroundColor = ConsoleColor.Red;
+    //Console.Write(user_defined);
     //Console.ForegroundColor = ConsoleColor.White;
-    //Console.WriteLine(sql + "\n");
+    //Console.WriteLine(staticSQLafter + "\n");
 
     // executing query
     auth.query(sql);
